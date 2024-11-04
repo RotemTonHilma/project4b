@@ -11,10 +11,14 @@ function Board({ user, playingUser, changeplayingUser, logPlayerOut }) {
     let isPlaying = user === playingUser;
 
     function scoresAvg(scoreArr) {
-        let sum = scoreArr.reduce((prev, value) => {
-            return prev + value;
-        }, 0);
-        return Math.floor(sum / scoreArr.length);
+        if (scoreArr.length) {
+            let sum = scoreArr.reduce((prev, value) => {
+                return prev + value;
+            }, 0);
+            return Math.floor(sum / scoreArr.length);
+        }
+        return 0;
+
     }
 
     function updateScores(s) {
@@ -56,7 +60,7 @@ function Board({ user, playingUser, changeplayingUser, logPlayerOut }) {
 
     return (
         <div style={{ border: "1px solid black" }}>
-            <h3>{user.username}</h3>
+            <h3>{user.userName}</h3>
             <p>Score:{score}</p>
             <h3>Current Number:{gameNumber}</h3>
 
@@ -69,11 +73,10 @@ function Board({ user, playingUser, changeplayingUser, logPlayerOut }) {
             })}
 
             {hasWon && <WinButtons
-                score={score}
                 setScore={setScore}
                 setGameNumber={setGameNumber}
-                updateScores={updateScores}
-                logout={logout} />
+                logout={logout}
+                setHasWon={setHasWon} />
             }
 
             <p>Scores: {user.scores.map((score) => {

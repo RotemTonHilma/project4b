@@ -1,8 +1,9 @@
-function WinButtons({ score, setScore, setGameNumber, updateScores, logout }) {
+function WinButtons({ setScore, setGameNumber, logout, setHasWon }) {
 
     function handleNewGame() {
         setScore(0);
         setGameNumber(Math.floor(Math.random() * 100));
+        setHasWon(false);
     }
 
     function handleLogOut() {

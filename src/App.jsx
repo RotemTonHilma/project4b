@@ -1,11 +1,13 @@
 import { useState } from 'react';
+import LogIn from './components/LogIn';
 import Game from "./components/Game";
 
 function App() {
-
+  const [showLogIn, setShowLogIn] = useState(true);
   return (
     <>
-      <Game />
+      {showLogIn && <LogIn showLogIn={showLogIn} setShowLogIn={setShowLogIn} />}
+      {!showLogIn && <Game />}
     </>
   )
 }
