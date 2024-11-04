@@ -2,7 +2,7 @@ import { useState } from 'react';
 import User from './User.jsx'
 import "./logIn.css"
 
-function LogIn() {
+function LogIn({ showLogIn, setShowLogIn }) {
     const users = JSON.parse(localStorage.getItem("users"));
     const players = []
 
@@ -10,7 +10,9 @@ function LogIn() {
         localStorage.setItem("users", [])
     }
     const [userList, setUserList] = useState(users);
-    const [newUser, setNewUser] = useState()
+    const [newUser, setNewUser] = useState();
+
+
     let newUserName;
     function addUser() {
         setNewUser(<User
@@ -29,8 +31,8 @@ function LogIn() {
     }
 
     function handleAddClick() {
-        for (let i=0;i<users.length;i++){
-            if (users[i].userName===newUserName){
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].userName === newUserName) {
                 alert("User already exists. Try another name")
                 return;
             }
@@ -46,16 +48,16 @@ function LogIn() {
             alert("Must have two players or more")
         } else {
             const currentUsers = []
-            for (let i=0; i < users.length; i++) {
-                for (let j=0; j < whantToPlay.length; j++) {
+            for (let i = 0; i < users.length; i++) {
+                for (let j = 0; j < whantToPlay.length; j++) {
                     if (users[i].userName === whantToPlay[j]) {
                         currentUsers.push(users[i])
                     }
                 }
             }
             // console.log('currentUsers: ', currentUsers);
-            localStorage.setItem("currentUsers",JSON.stringify(currentUsers))
-
+            localStorage.setItem("currentUsers", JSON.stringify(currentUsers));
+            setShowLogIn(false);
         }
     }
 

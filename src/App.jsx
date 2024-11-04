@@ -1,13 +1,13 @@
 import { useState } from 'react';
-import LogIn from './LogIn';
-import LeaderBoard from './LeaderBoard';
+import LogIn from './components/LogIn';
+import Game from "./components/Game";
 
 function App() {
-
+  const [showLogIn, setShowLogIn] = useState(true);
   return (
     <>
-      <LogIn />
-    {/* <LeaderBoard /> */}
+      {showLogIn && <LogIn showLogIn={showLogIn} setShowLogIn={setShowLogIn} />}
+      {!showLogIn && <Game />}
     </>
   )
 }
