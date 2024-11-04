@@ -70,10 +70,10 @@ function LogIn({ setShowLogIn }) {
                     players={players} />)
             })}
             {newUser}
-            <button 
+            <button
                 id='newPlayer'
                 onClick={addUser}>add player</button>
-            <button 
+            <button
                 id='startGame'
                 onClick={handleStartGameClick}>Start Game</button>
         </>

@@ -64,7 +64,7 @@ function Board({ user, playingUser, changeplayingUser, logPlayerOut, updateLeadr
         <div className="board">
             <h3>{user.userName}</h3>
             <p>Score:{score}</p>
-            <h3>Current Number:{gameNumber}</h3>
+            <h3 style={{ fontSize: "3em", margin: "15px" }}>{gameNumber}</h3>
 
             {!hasWon && actions.map((action) => {
                 return <Operator key={action}
