@@ -2,7 +2,7 @@ import Operator from "./Operator";
 import WinButtons from "./WinButtons";
 import { useState } from 'react';
 
-function Board({ user, playingUser, changeplayingUser, logPlayerOut }) {
+function Board({ user, playingUser, changeplayingUser, logPlayerOut, updateLeadrBoard}) {
     const [score, setScore] = useState(0);
     const [gameNumber, setGameNumber] = useState(Math.floor(Math.random() * 100));
     const [hasWon, setHasWon] = useState(gameNumber === 100);
@@ -23,6 +23,7 @@ function Board({ user, playingUser, changeplayingUser, logPlayerOut }) {
 
     function logout() {
         logPlayerOut(user);
+        updateLeadrBoard(user)
     }
 
     function operatorClick(action) {
@@ -49,10 +50,14 @@ function Board({ user, playingUser, changeplayingUser, logPlayerOut }) {
                 break;
             }
         }
-        if (nextGameNumber === 100) user.scores.push(score + 1);
+        if (nextGameNumber === 100) {
+            user.scores.push(score + 1);
+            updateLeadrBoard(user);
+        }
         setHasWon(nextGameNumber === 100);
         setScore(prev => prev + 1);
         changeplayingUser();
+
     }
 
     return (

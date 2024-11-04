@@ -68,3 +68,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
+  th, td{
+    width: 150px;
+    height: 30px;
+    background-color: lightsteelblue;
+  }
+  td{
+    background-color: lightskyblue;
+  }

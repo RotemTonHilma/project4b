@@ -23,7 +23,6 @@ function LogIn({ setShowLogIn }) {
     }
     function handleInputChange(e) {
         newUserName = e.target.value;
-        // console.log('newUserName: ', newUserName);
         return newUserName;
     }
     function cancelNewUser() {
@@ -55,7 +54,7 @@ function LogIn({ setShowLogIn }) {
                     }
                 }
             }
-            // console.log('currentUsers: ', currentUsers);
+
             localStorage.setItem("currentUsers", JSON.stringify(currentUsers));
             setShowLogIn(false);
         }
