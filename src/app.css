@@ -1,56 +1,70 @@
-  body{
+  body {
     background-color: lightblue;
   }
- 
+
   #root {
     max-width: 1280px;
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
     place-items: center;
-    color:rgb(12, 68, 171);
+    color: rgb(12, 68, 171);
 
   }
 
-  .user{
+  .user {
     text-align: start;
-    background-color:lightskyblue;
+    background-color: lightskyblue;
     border-radius: 7px;
-    border: 3px solid rgb(116, 195, 245);
+    border: 3px ridge rgb(116, 195, 245);
     padding: 10px 20px;
     margin: 7px;
     min-width: fit-content + 25px;
     width: 200px;
     font-size: 23px;
   }
-  .newUser{
+
+  .newUser {
     text-align: start;
-    background-color:lightskyblue;
+    background-color: lightskyblue;
     border-radius: 7px;
-    border: 3px solid rgb(116, 195, 245);
+    border: 3px ridge rgb(116, 195, 245);
     padding: 0 20px 10px;
     margin: 7px;
     min-width: fit-content + 25px;
     width: 200px;
   }
-  .newUser input{
+
+  .newUser input {
     background-color: rgb(219, 230, 245);
     height: 25px;
     width: 95%;
   }
 
-  .newUser button{
+  .newUser button {
     margin-left: 0;
   }
 
-  button{
+  button {
     background-color: rgb(219, 230, 245);
-    color:rgb(2, 47, 131);
+    color: rgb(2, 47, 131);
     margin: 7px;
     font-size: 20px;
   }
 
-  #newPlayer{
+  #newPlayer {
     margin-right: 0;
 
+  }
+
+  .board {
+    border: 3px inset rgb(12, 68, 171);
+    margin: 7px;
+    background-color: rgb(176, 217, 243);
+    border-radius: 10px;
+  }
+
+  #game {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }

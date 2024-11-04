@@ -31,7 +31,7 @@ function Game() {
 
     return (
         <>
-            <div style={{ border: "1px solid black" }}>
+            <div id='game'>
                 {activeUsers.map((user) => {
                     return <Board key={user.userName}
                         user={user}

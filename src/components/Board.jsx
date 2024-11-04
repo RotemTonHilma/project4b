@@ -59,7 +59,7 @@ function Board({ user, playingUser, changeplayingUser, logPlayerOut }) {
     }
 
     return (
-        <div style={{ border: "1px solid black" }}>
+        <div className="board">
             <h3>{user.userName}</h3>
             <p>Score:{score}</p>
             <h3>Current Number:{gameNumber}</h3>

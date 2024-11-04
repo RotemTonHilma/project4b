@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import User from './User.jsx'
-import "./logIn.css"
+import "../app.css"
 
-function LogIn({ showLogIn, setShowLogIn }) {
+function LogIn({ setShowLogIn }) {
     const users = JSON.parse(localStorage.getItem("users"));
     const players = []
 
