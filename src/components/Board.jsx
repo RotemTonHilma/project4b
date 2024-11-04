@@ -21,9 +21,6 @@ function Board({ user, playingUser, changeplayingUser, logPlayerOut }) {
 
     }
 
-    function updateScores(s) {
-        user.scores.push(s);
-    }
     function logout() {
         logPlayerOut(user);
     }
