@@ -1,0 +1,56 @@
+  body{
+    background-color: lightblue;
+  }
+ 
+  #root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    place-items: center;
+    color:rgb(12, 68, 171);
+
+  }
+
+  .user{
+    text-align: start;
+    background-color:lightskyblue;
+    border-radius: 7px;
+    border: 3px solid rgb(116, 195, 245);
+    padding: 10px 20px;
+    margin: 7px;
+    min-width: fit-content + 25px;
+    width: 200px;
+    font-size: 23px;
+  }
+  .newUser{
+    text-align: start;
+    background-color:lightskyblue;
+    border-radius: 7px;
+    border: 3px solid rgb(116, 195, 245);
+    padding: 0 20px 10px;
+    margin: 7px;
+    min-width: fit-content + 25px;
+    width: 200px;
+  }
+  .newUser input{
+    background-color: rgb(219, 230, 245);
+    height: 25px;
+    width: 95%;
+  }
+
+  .newUser button{
+    margin-left: 0;
+  }
+
+  button{
+    background-color: rgb(219, 230, 245);
+    color:rgb(2, 47, 131);
+    margin: 7px;
+    font-size: 20px;
+  }
+
+  #newPlayer{
+    margin-right: 0;
+
+  }

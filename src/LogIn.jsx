@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import User from './User.jsx'
+import "./logIn.css"
 
 function LogIn() {
     const users = JSON.parse(localStorage.getItem("users"));
@@ -68,8 +69,12 @@ function LogIn() {
                     players={players} />)
             })}
             {newUser}
-            <br /><button onClick={addUser}>add player</button>
-            <br /><button onClick={handleStartGameClick}>Start Game</button>
+            <button 
+                id='newPlayer'
+                onClick={addUser}>add player</button>
+            <button 
+                id='startGame'
+                onClick={handleStartGameClick}>Start Game</button>
         </>
     )
 }
